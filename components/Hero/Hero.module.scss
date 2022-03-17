@@ -1,0 +1,43 @@
+@import '../../styles/_media_querys.scss';
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 2rem;
+	background: url('/img/hero.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	&__title {
+		font-size: 3rem;
+		text-align: center;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: var(--color-1);
+		text-shadow: rgba(0, 0, 0, 0.2) 1px 3px 4px;
+		margin-bottom: 10rem;
+		font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+			Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+		scroll-behavior: smooth;
+		@include media {
+			font-size: 5rem;
+		}
+	}
+	&__button {
+		display: inline-block;
+		text-transform: uppercase;
+		border: 2px solid var(--color-1);
+		padding: 1rem 2rem;
+		font-size: 1rem;
+		letter-spacing: 5px;
+		color: var(--color-1);
+		transition: 0.2s;
+		&:hover {
+			background: var(--color-1);
+			color: initial;
+		}
+	}
+}
