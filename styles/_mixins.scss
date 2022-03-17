@@ -1,3 +1,18 @@
+@mixin button {
+	display: inline-block;
+	text-transform: uppercase;
+	border: 2px solid var(--color-1);
+	padding: 1rem 2rem;
+	font-size: 1rem;
+	letter-spacing: 5px;
+	color: var(--color-1);
+	transition: 0.2s;
+	&:hover {
+		background: var(--color-1);
+		color: initial;
+	}
+}
+
 @mixin section-title {
 	&__text {
 		color: var(--color-2);

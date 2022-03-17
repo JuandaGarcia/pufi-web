@@ -1,0 +1,29 @@
+@import '../../styles/mixins';
+@import '../../styles/media_querys';
+
+.instagram {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 2rem;
+	padding-top: 5rem;
+	@include section-title;
+	&__galery {
+		display: grid;
+		margin-top: 2rem;
+		grid-template-columns: max-content max-content;
+		gap: 2px;
+		@include media {
+			grid-template-columns: max-content max-content max-content;
+		}
+		&__photo {
+			width: 10rem;
+			height: 10rem;
+			object-fit: cover;
+			@include media {
+				width: 15rem;
+				height: 15rem;
+			}
+		}
+	}
+}

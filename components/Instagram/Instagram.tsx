@@ -1,22 +1,44 @@
-import { useEffect } from 'react'
+import s from './Instagram.module.scss'
 
 const Instagram = () => {
-	useEffect(() => {
-		const getData = async () => {
-			try {
-				const response = await fetch(
-					'https://www.instagram.com/juandagarciaa/?__a=1'
-				)
-				const data = await response.json()
-				console.log(data)
-			} catch (error) {
-				console.log(error)
-			}
-		}
-		getData()
-	}, [])
-
-	return <section>Instagram</section>
+	return (
+		<section className={s.instagram}>
+			<p className={s.instagram__text}>Instagram</p>
+			<h2 className={s.instagram__title}>#ESPUFI</h2>
+			<div className={s.instagram__galery}>
+				<img
+					className={s.instagram__galery__photo}
+					src="/img/hero.jpg"
+					alt="Foto de Instagram"
+				/>
+				<img
+					className={s.instagram__galery__photo}
+					src="/img/hero.jpg"
+					alt="Foto de Instagram"
+				/>
+				<img
+					className={s.instagram__galery__photo}
+					src="/img/hero.jpg"
+					alt="Foto de Instagram"
+				/>
+				<img
+					className={s.instagram__galery__photo}
+					src="/img/hero.jpg"
+					alt="Foto de Instagram"
+				/>
+				<img
+					className={s.instagram__galery__photo}
+					src="/img/hero.jpg"
+					alt="Foto de Instagram"
+				/>
+				<img
+					className={s.instagram__galery__photo}
+					src="/img/hero.jpg"
+					alt="Foto de Instagram"
+				/>
+			</div>
+		</section>
+	)
 }
 
 export default Instagram

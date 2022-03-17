@@ -18,10 +18,7 @@ const Newsletter = () => {
 	return (
 		<section className={s.newsletter}>
 			<p className={s.newsletter__text}>Newsletter</p>
-			<h2 className={s.newsletter__title}>
-				Suscribete
-				<br />
-			</h2>
+			<h2 className={s.newsletter__title}>Suscribete</h2>
 			<span>y enterate de todas las novedades</span>
 			{errors.email?.message && (
 				<p aria-live="assertive" className={s.newsletter__error}>
