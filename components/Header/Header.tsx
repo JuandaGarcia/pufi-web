@@ -36,7 +36,7 @@ const Header = () => {
 		}
 	}, [openMenu])
 
-	const toggleMenu = () => setOpenMenu(!openMenu)
+	const closeMenu = () => setOpenMenu(false)
 
 	return (
 		<header className={s.header}>
@@ -50,7 +50,7 @@ const Header = () => {
 							<a
 								href="#puff"
 								className={s.header__content__nav__list__item}
-								onClick={toggleMenu}
+								onClick={closeMenu}
 							>
 								<FiLifeBuoy size={32} />
 								<span>PUFI PUFF</span>
@@ -60,7 +60,7 @@ const Header = () => {
 							<a
 								href="#rain"
 								className={s.header__content__nav__list__item}
-								onClick={toggleMenu}
+								onClick={closeMenu}
 							>
 								<FiUmbrella size={32} />
 								<span>PUFI RAIN</span>
@@ -70,7 +70,7 @@ const Header = () => {
 							<a
 								href="#cart"
 								className={s.header__content__nav__list__item}
-								onClick={toggleMenu}
+								onClick={closeMenu}
 							>
 								<FiShoppingBag size={32} />
 								<span>PUFI CART</span>
@@ -80,14 +80,14 @@ const Header = () => {
 							<a
 								href="#nap"
 								className={s.header__content__nav__list__item}
-								onClick={toggleMenu}
+								onClick={closeMenu}
 							>
 								<FiSquare size={32} />
 								<span>PUFI NAP</span>
 							</a>
 						</li>
 					</ul>
-					<div className={s.header__content__nav__options} onClick={toggleMenu}>
+					<div className={s.header__content__nav__options} onClick={closeMenu}>
 						<Options />
 					</div>
 				</nav>
@@ -95,7 +95,7 @@ const Header = () => {
 					<Options />
 				</div>
 				<button
-					onClick={toggleMenu}
+					onClick={() => setOpenMenu(!openMenu)}
 					aria-label="Menú"
 					className={s.header__content__burger}
 				>
