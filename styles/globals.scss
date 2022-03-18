@@ -12,6 +12,11 @@ a {
 	text-decoration: none;
 }
 
+q,
+button {
+	-webkit-tap-highlight-color: transparent;
+}
+
 * {
 	box-sizing: border-box;
 }
