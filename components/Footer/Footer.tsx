@@ -1,4 +1,3 @@
-import Logo from 'components/Logo/Logo'
 import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi'
 import s from './Footer.module.scss'
 
@@ -6,19 +5,25 @@ const Footer = () => {
 	return (
 		<footer className={s.footer}>
 			<div className={s.footer__content}>
-				<Logo fill="#000" />
+				<a href="#" className={s.footer__content__logo}>
+					<img
+						className={s.footer__content__logo__img}
+						src="/img/logo-black.svg"
+						alt="Logo"
+					/>
+				</a>
 				<ul className={s.footer__content__section}>
 					<li>
-						<a href="#">Pufi Rain</a>
+						<a href="#rain">Pufi Rain</a>
 					</li>
 					<li>
-						<a href="#">Pufi Puff</a>
+						<a href="#puff">Pufi Puff</a>
 					</li>
 					<li>
-						<a href="#">Pufi Cart</a>
+						<a href="#cart">Pufi Cart</a>
 					</li>
 					<li>
-						<a href="#">Pufi Nap</a>
+						<a href="#nap">Pufi Nap</a>
 					</li>
 				</ul>
 				<ul className={s.footer__content__section}>

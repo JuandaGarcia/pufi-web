@@ -4,23 +4,24 @@ import Instagram from 'components/Instagram/Instagram'
 import Newsletter from 'components/Newsletter/Newsletter'
 import Products from 'components/Products/Products'
 import { GetStaticProps } from 'next'
+import { getInstagramData } from 'utils/getInstagramData'
+import { Post } from 'utils/types/Post'
 
-const Home = () => {
+type Props = {
+	post: Post[]
+}
+const Home = ({ post }: Props) => {
 	return (
 		<>
 			<Hero />
 			<Products />
-			<Instagram />
+			<Instagram posts={post} />
 			<Newsletter />
 			<Footer />
 		</>
 	)
 }
 
-export const getStaticProps: GetStaticProps = async context => {
-	return {
-		props: {},
-	}
-}
+export const getStaticProps: GetStaticProps = ctx => getInstagramData(ctx)
 
 export default Home
