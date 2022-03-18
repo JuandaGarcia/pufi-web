@@ -91,7 +91,7 @@ const Header = () => {
 						<Options />
 					</div>
 				</nav>
-				<div className={s.header__content__options} onClick={toggleMenu}>
+				<div className={s.header__content__options}>
 					<Options />
 				</div>
 				<button
