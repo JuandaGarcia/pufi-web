@@ -93,6 +93,8 @@
 			outline: none;
 			border: none;
 			cursor: pointer;
+			position: sticky;
+			top: 2rem;
 			@include media {
 				display: none;
 			}

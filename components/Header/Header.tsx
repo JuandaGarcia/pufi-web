@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
 	FiChevronDown,
 	FiLifeBuoy,
@@ -23,6 +23,18 @@ const Options = () => (
 
 const Header = () => {
 	const [openMenu, setOpenMenu] = useState(false)
+
+	useEffect(() => {
+		if (openMenu) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = 'auto'
+		}
+
+		return () => {
+			document.body.style.overflow = 'auto'
+		}
+	}, [openMenu])
 
 	const toggleMenu = () => setOpenMenu(!openMenu)
 
